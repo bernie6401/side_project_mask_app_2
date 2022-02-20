@@ -15,29 +15,13 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-        <!--match_parent就是指把畫面填滿-->
-        <!--wrap_content就是指根據ScrollView這個標籤中的內容物決定高度與寬度，此時就必須要告訴程式兩者的相依關係
-        就是告訴程式上下左右各要對齊誰-->
 
         <TextView
             android:id="@+id/tv_Pharmacy_Data"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Hello SBK!" /><!--有無預設值都沒關係-->
-        <!--android:id是代表給TextView這個label一個編號，
-        以便於我們在顯示東西可以指定，"@+id/"後面是id的名稱-->
 
-        <!--以下comment就是constraint layout，也就是相依關係
-        由於原本的TextView中的layout_width是wrap_content
-        所以需要加這個
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        -->
-
-        <!--另外如果是<>的中間除了設定的參數以外，沒有要放其他元件的話
-        就必須要加上</ScrollView>，不然其實可以在最後加上結尾符號，就像下面的TextView一樣-->
     </ScrollView>
 
     <!--以下部分為忙碌圈圈的LAYOUT-->
@@ -49,16 +33,5 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <!--Initial position
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
