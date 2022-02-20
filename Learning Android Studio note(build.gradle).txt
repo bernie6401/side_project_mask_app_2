@@ -1,0 +1,18 @@
+/*新版 kotlin 1.4.2 官方正式宣布廢棄 Kotlin Android Extension (KAE)。
+過往使用 KAE 最大好處，就是可以透過 synthetic 少打定義和 findViewById。
+但實際這樣使用，其實延伸出不少問題。
+官方廢棄 synthetic 當然不是鼓勵大家回去用 findViewById 或 ButterKnife
+而是很清楚明白的跟大家建議使用 View Binding。*/
+buildFeatures
+{
+	viewBinding true
+}
+
+
+implementation 'com.squareup.okhttp3:okhttp:4.9.0'  //mask app project
+/*加入以下implementation可以利用okhttp的這個功能回傳並印出網頁的一些狀態
+，例如連線的網址、回應狀態碼和連線回應的花費的時間*/
+implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0' //for okhttp
+/*利用Gson可以加快資料的搜尋速度，且如果手機在搜尋資料中不存在的key時會報錯並閃退
+如果要利用json的方式存取，就必須要加很多判斷式，會很冗長，這時候Gson就很好用*/
+implementation 'com.google.code.gson:gson:2.8.6'
